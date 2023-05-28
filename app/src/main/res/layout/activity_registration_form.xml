@@ -20,7 +20,7 @@
         />
 
     <androidx.constraintlayout.utils.widget.ImageFilterButton
-        android:id="@+id/logo_img_view"
+        android:id="@+id/logo_img_view_registration_form"
         android:layout_width="@dimen/_119sdp"
         android:layout_height="@dimen/_136sdp"
         android:src="@drawable/logo"

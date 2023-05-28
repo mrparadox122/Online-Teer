@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/login_btn"
         android:layout_marginStart="@dimen/_65sdp"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:text="Don't have an account?"
         android:layout_marginBottom="@dimen/_50sdp"
         android:textSize="@dimen/_10sdp"/>
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_btn"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:layout_toEndOf="@id/dont_have_account_login"
         android:text="@string/Register_an_account"
         android:textColor="#E6B18CFF"
