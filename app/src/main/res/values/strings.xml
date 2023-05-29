@@ -2,4 +2,8 @@
     <string name="app_name">Online Teer</string>
     <string name="Forget_password"> <u>Forgot Password? </u></string>
     <string name="Register_an_account"> <u>Register_an_account</u></string>
+    <string name="title_activity_home_screen">Home_Screen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

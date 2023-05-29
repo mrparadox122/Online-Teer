@@ -11,6 +11,8 @@
         android:id="@+id/logo_img_view"
         android:layout_width="@dimen/_119sdp"
         android:layout_height="@dimen/_136sdp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
         android:src="@drawable/logo"
         android:layout_marginTop="@dimen/_101sdp"
         android:layout_centerHorizontal="true"
