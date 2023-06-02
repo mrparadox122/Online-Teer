@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_options">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_options"
         android:name="com.onlineteer.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="Options"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
