@@ -1,19 +1,33 @@
 package com.onlineteer.ui.home;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
+public class HomeViewModel {
+    String RoundText;
+    String timingStart;
 
-public class HomeViewModel extends ViewModel {
-
-    private final MutableLiveData<String> mText;
-
-    public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+    public String getTimingEnd() {
+        return timingEnd;
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public HomeViewModel(String roundText, String timingStart, String timingEnd, String resulttiming) {
+        RoundText = roundText;
+        this.timingStart = timingStart;
+        this.timingEnd = timingEnd;
+        this.resulttiming = resulttiming;
     }
+
+    String timingEnd;
+    String resulttiming;
+
+    public String getRoundText() {
+        return RoundText;
+    }
+
+    public String getTimingStart() {
+        return timingStart;
+    }
+
+    public String getResulttiming() {
+        return resulttiming;
+    }
+
 }

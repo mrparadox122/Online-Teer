@@ -9,23 +9,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 
+import com.onlineteer.Api.HomeAPi;
 import com.onlineteer.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+import java.util.ArrayList;
+
+public class HomeFragment extends Fragment implements HomeAPi.OnHomeAPiHit {
 
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        binding.HomeRecycler.showShimmerAdapter();
+        HomeAPi homeAPi = new HomeAPi(this);
+        homeAPi.CallApi();
         return root;
     }
 
@@ -33,5 +36,18 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void OnHomeApiGivesResult(ArrayList<HomeViewModel> homeViewModels) {
+        requireActivity().runOnUiThread( () -> {
+            binding.HomeRecycler.setLayoutManager(new GridLayoutManager(requireContext(),2));
+            binding.HomeRecycler.setAdapter(new HomeAdaptor(homeViewModels));
+        } );
+    }
+
+    @Override
+    public void OnHomeAPiGivesError(String error) {
+
     }
 }

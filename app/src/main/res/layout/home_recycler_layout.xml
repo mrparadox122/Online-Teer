@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    android:background="@drawable/custom_edit_shape"
+    android:layout_margin="@dimen/_5sdp"
+    android:backgroundTint="#E3591E87">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="FirstRound"
+        android:layout_margin="@dimen/_5sdp"
+        android:textSize="@dimen/_20sdp"
+        android:id="@+id/RoundText"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="1:02 AM - 03:07 PM"
+        android:layout_below="@+id/RoundText"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textSize="@dimen/_15sdp"
+        android:id="@+id/timing"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="RESULT TIME - 03:08 PM"
+        android:layout_below="@+id/timing"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textSize="@dimen/_12sdp"
+        android:id="@+id/Resulttiming"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@id/Resulttiming"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/custom_edit_shape"
+        android:backgroundTint="@color/white"
+        android:text="Play Now"
+        android:id="@+id/Playnow"/>
+
+
+
+</RelativeLayout>

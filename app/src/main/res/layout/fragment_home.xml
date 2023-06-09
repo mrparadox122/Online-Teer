@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/BannersPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/purple_200" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/BannersPager"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/custom_edit_shape"
+        android:backgroundTint="#E6591E87"
+        android:id="@+id/HomeBuyCoin"
+        android:text="Buy Coins 0 "
+        android:textAlignment="center"
+        android:drawableEnd="@drawable/vector_4_"
+        android:paddingEnd="@dimen/_100sdp"
+        android:drawablePadding="-120dp"
+        android:textColor="#FFEB3B"
+        />
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@id/HomeBuyCoin"
+        android:layout_margin="@dimen/_10sdp"
+        app:shimmer_demo_layout_manager_type="grid"
+        app:shimmer_demo_grid_child_count="2"
+        app:shimmer_demo_child_count="20"
+        android:id="@+id/HomeRecycler"
+        tools:listitem="@layout/home_recycler_layout"
+        tools:itemCount="20"
+        />
+
+</RelativeLayout>
